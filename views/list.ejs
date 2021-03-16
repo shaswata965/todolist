@@ -1,0 +1,28 @@
+<%- include('header'); -%>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+                <h1><%=listTitle %></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <ul class="main_ul">
+            <%for(var i = 0;i<Task.length;i++){ %>
+               <li class="main_li"><input type="checkbox" id="box" ><label><%= Task[i] %> </label></li>
+            <%}%>
+
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <form action="/" method="post">
+            <input class="newItem" type="text" name="addItem" placeholder="Enter The Task">
+            <button class=" main_button " type="submit" name="switch" value= <%=listTitle%>></button>
+          </form>
+        </div>
+      </div>
+
+
+<%- include('footer'); -%>
